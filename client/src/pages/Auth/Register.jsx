@@ -1,22 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 export const Register = () => {
   const handleRegisterForm = (e) => {
     e.preventDefault();
-  }
+  };
   return (
     <>
-      <div className="h-full">
+      <div className="h-full font-NotoSans">
         <div className="bg-clrSmokyBlack flex h-full items-center py-16">
           <main className="w-full max-w-md mx-auto p-6">
             <div className="mt-7 bg-clrBalticSea border border-gray-600 rounded-xl shadow-sm py-5">
               <div className="p-4 sm:p-7 ">
-
                 <div className="text-center">
-                  <h1 className="block text-2xl font-bold text-white">Register</h1>
+                  <h1 className="block text-2xl font-bold text-white">
+                    Register
+                  </h1>
                   <p className="mt-2  text-sm text-gray-600 dark:text-gray-400">
                     Already have an account?
-                    <Link to={'/login'} className="ml-2  decoration-2 hover:underline font-medium" >
+                    <Link
+                      to={"/login"}
+                      className="ml-2  decoration-2 hover:underline font-medium"
+                    >
                       Login here
                     </Link>
                   </p>
@@ -35,54 +39,80 @@ export const Register = () => {
 
                   {/* <div className="py-3 flex items-center text-xs  uppercase before:flex-[1_1_0%] before:border-t  before:mr-6 after:flex-[1_1_0%] after:border-t  after:ml-6 text-gray-500 before:border-gray-600 after:border-gray-600">Or</div> */}
 
-
                   <form onSubmit={handleRegisterForm}>
                     <div className="grid gap-y-4">
-
-
                       <div>
                         <div className="flex justify-between items-center">
-                          <label for="username" className="block text-sm mb-2 text-white">Username</label>
-
+                          <label
+                            for="username"
+                            className="block text-sm mb-2 text-white"
+                          >
+                            Username
+                          </label>
                         </div>
                         <div className="relative">
-                          <input type="text" id="username" name="username" className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400" required autoComplete='off'/>
+                          <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400"
+                            required
+                            autoComplete="off"
+                          />
                         </div>
-
                       </div>
 
                       <div>
                         <div className="flex justify-between items-center">
-                          <label for="email" className="block text-sm mb-2 text-white">Email address</label>
-
+                          <label
+                            for="email"
+                            className="block text-sm mb-2 text-white"
+                          >
+                            Email address
+                          </label>
                         </div>
                         <div className="relative">
-                          <input type="email" id="email" name="email" className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400" required autoComplete='off'/>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400"
+                            required
+                            autoComplete="off"
+                          />
                         </div>
-
                       </div>
-
-
 
                       <div>
-
                         <div className="flex justify-between items-center">
-                          <label for="password" className="block text-sm mb-2 dark:text-white">Password</label>
+                          <label
+                            for="password"
+                            className="block text-sm mb-2 dark:text-white"
+                          >
+                            Password
+                          </label>
                         </div>
 
                         <div className="relative">
-                          <input type="password" id="password" name="password" className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400" required autoComplete='off'/>
+                          <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400"
+                            required
+                            autoComplete="off"
+                          />
                         </div>
-
                       </div>
 
-
-
-
-                      <button type="submit" className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-clrSmokyBlack/70 text-white hover:bg-clrSmokyBlack/90 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm focus:ring-offset-gray-800">Register</button>
+                      <button
+                        type="submit"
+                        className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-clrSmokyBlack/70 text-white hover:bg-clrSmokyBlack/90 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm focus:ring-offset-gray-800"
+                      >
+                        Register
+                      </button>
                     </div>
                   </form>
-
                 </div>
               </div>
             </div>
@@ -90,5 +120,5 @@ export const Register = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};

@@ -1,14 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
-
   const handleLoginForm = (e) => {
     e.preventDefault();
-  }
+  };
   return (
     <>
-      <div className="h-full">
+      <div className="h-full font-NotoSans">
         <div className="bg-clrSmokyBlack flex h-full items-center py-16">
           <main className="w-full max-w-md mx-auto p-6">
             <div className="mt-7 bg-clrBalticSea border border-gray-600 rounded-xl shadow-sm py-5">
@@ -17,7 +16,10 @@ export const Login = () => {
                   <h1 className="block text-2xl font-bold text-white">Login</h1>
                   <p className="mt-2  text-sm text-gray-600 dark:text-gray-400">
                     Don't have an account yet?
-                    <Link to={'/register'} className="ml-2  decoration-2 hover:underline font-medium" >
+                    <Link
+                      to={"/register"}
+                      className="ml-2  decoration-2 hover:underline font-medium"
+                    >
                       Register here
                     </Link>
                   </p>
@@ -39,36 +41,55 @@ export const Login = () => {
 
                   <form onSubmit={handleLoginForm}>
                     <div className="grid gap-y-4">
-
                       <div>
-                        <label for="email" className="block text-sm mb-2 text-white">Email address</label>
+                        <label
+                          for="email"
+                          className="block text-sm mb-2 text-white"
+                        >
+                          Email address
+                        </label>
                         <div className="relative">
-                          <input type="email" id="email" name="email" className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400" required autoComplete='off' />
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400"
+                            required
+                            autoComplete="off"
+                          />
                         </div>
-
                       </div>
 
-
-
                       <div>
-
                         <div className="flex justify-between items-center">
-                          <label for="password" className="block text-sm mb-2 dark:text-white">Password</label>
+                          <label
+                            for="password"
+                            className="block text-sm mb-2 dark:text-white"
+                          >
+                            Password
+                          </label>
                         </div>
 
                         <div className="relative">
-                          <input type="password" id="password" name="password" className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400" required autoComplete='off' />
+                          <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            className="py-3 px-4 block w-full rounded-md text-sm  bg-clrBalticSea   ring-1 ring-clrShipGrey text-gray-400"
+                            required
+                            autoComplete="off"
+                          />
                         </div>
-
                       </div>
 
-
-
-
-                      <button type="submit" className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-clrSmokyBlack/70 text-white hover:bg-clrSmokyBlack/90 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm focus:ring-offset-gray-800">Login</button>
+                      <button
+                        type="submit"
+                        className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-clrSmokyBlack/70 text-white hover:bg-clrSmokyBlack/90 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm focus:ring-offset-gray-800"
+                      >
+                        Login
+                      </button>
                     </div>
                   </form>
-
                 </div>
               </div>
             </div>
@@ -76,5 +97,5 @@ export const Login = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};

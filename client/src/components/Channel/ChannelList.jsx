@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const ChannelList = () => {
-  return (
-    <div>ChannelList</div>
-  )
-}
+  return <div>ChannelList</div>;
+};

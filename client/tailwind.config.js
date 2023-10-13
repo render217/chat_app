@@ -13,6 +13,7 @@ export default {
                 clrClearBlue: "#2F80ED",
                 clrNight: "#0B090C",
                 clrPorcelain: "#F2F2F2",
+                clrFrenchGray: "#BDBDBD",
             },
             fontFamily: {
                 NotoSans: ["Noto Sans", "sans-serif"],
