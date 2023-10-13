@@ -8,7 +8,7 @@ export const Modal = ({ children }) => {
   return createPortal(
     <>
       <div
-        className="bg-clrSmokyBlack/80 absolute inset-0 grid place-content-center"
+        className="bg-clrSmokyBlack/80 absolute inset-0 grid place-content-center z-50"
         onClick={closeModal}
       >
         {children}

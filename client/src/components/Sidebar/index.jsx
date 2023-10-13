@@ -18,6 +18,7 @@ export const Sidebar = () => {
     openChannel,
     closeChannel,
     isModalOpen,
+    showAddChannelModal,
     openModal,
     closeShowDropDown,
   } = useUIState();
@@ -37,7 +38,7 @@ export const Sidebar = () => {
           ) : (
             <div className="flex items-center justify-between">
               <p>All Channels</p>
-              <button className="text-white bg-clrBalticSea px-2 py-1 rounded-md hover:bg-clrBalticSea/90" onClick={openModal}>
+              <button className="text-white bg-clrBalticSea px-2 py-1 rounded-md hover:bg-clrBalticSea/90" onClick={() => openModal('addchannel')}>
                 <FontAwesomeIcon icon={faPlus} className="bg-tranparent" />
               </button>
               {/* {isMobileScreen && <p onClick={closeSideBar}>|||</p>} */}
@@ -71,7 +72,7 @@ export const Sidebar = () => {
 
       </div >
 
-      {isModalOpen && (
+      {isModalOpen && showAddChannelModal && (
         <Modal>
           <div className="grid place-items-center bg-transparent w-screen h-[60vh] z-30">
             <div

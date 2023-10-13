@@ -9,6 +9,11 @@ const UIStateContext = createContext({
   isModalOpen: Boolean,
   showUserProfile: Boolean,
   showDropDown: Boolean,
+  showMyProfileModal: Boolean,
+  showAddChannelModal: Boolean,
+  showEditProfileModal: Boolean,
+  showUserProfileModal: Boolean,
+  showAddMemberModal: Boolean,
   openSideBar: () => { },
   closeSideBar: () => { },
   openChannel: () => { },
@@ -28,6 +33,13 @@ const UIStateProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
 
+  const [showMyProfileModal, setShowMyProfileModal] = useState(false);
+  const [showAddChannelModal, setShowAddChannelModal] = useState(false);
+  const [showAddMemberModal, setShowAddMemberModal] = useState(false);
+  const [showEditProfileModal, setShowEditProfileModal] = useState(false);
+  const [showUserProfileModal, setUserProfileModal] = useState(false);
+
+
 
   useEffect(() => {
     if (screenWidth >= SCREEN_BREAKPOINT) {
@@ -46,9 +58,36 @@ const UIStateProvider = ({ children }) => {
   const openChannel = () => setIsChannelOpen(true);
   const closeChannel = () => setIsChannelOpen(false);
   //
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = (type) => {
+    setIsModalOpen(true)
+    switch (type) {
+      case 'myprofile':
+        setShowMyProfileModal(true);
+        break;
+      case 'addchannel':
+        setShowAddChannelModal(true);
+        break;
+      case 'addmember':
+        setShowAddMemberModal(true);
+        break;
+      case 'editprofile':
+        setShowEditProfileModal(true);
+        break;
 
+      case 'userprofile':
+        setUserProfileModal(true);
+        break;
+      default:
+    }
+  }
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setShowMyProfileModal(false);
+    setShowAddChannelModal(false);
+    setShowAddMemberModal(false);
+    setShowEditProfileModal(false);
+    setUserProfileModal(false);
+  }
   //
   const openshowDropDown = () => setShowDropDown(true);
   const closeShowDropDown = () => setShowDropDown(false);
@@ -61,6 +100,11 @@ const UIStateProvider = ({ children }) => {
         isChannelOpen,
         isModalOpen,
         showDropDown,
+        showMyProfileModal,
+        showAddChannelModal,
+        showEditProfileModal,
+        showUserProfileModal,
+        showAddMemberModal,
         openChannel,
         closeChannel,
         openSideBar,
